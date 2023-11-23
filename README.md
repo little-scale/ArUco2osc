@@ -18,3 +18,5 @@ Each message contains:
 - angle in degrees
 - x value of midpoint of marker as a normalised value
 - y value of midpoint of marker as a normalised value
+
+To change the marker type used for detection, change DICT_4X4_50 to a different value
