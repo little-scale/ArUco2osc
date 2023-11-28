@@ -20,3 +20,10 @@ Each message contains a list of 5 values per marker. The total list length is th
 - y value of midpoint of marker as a normalised value
 
 To change the marker type used for detection, change DICT_4X4_50 to a different value
+
+Use examples / files: 
+- aruco2osc.py : python script that takes the ArUco marker data and sends via OSC to another app
+- aruco_synth.maxpat: example of using six markers to drive a rectangle wave drone synth - see here: https://www.instagram.com/p/C0LVVTMLvMj/?img_index=1
+- aruco_grid_synth.maxpat : example of using 48 markers printed as a grid to drive an additive synth - see here: https://www.instagram.com/p/C0GEJtYrUWq/?img_index=1
+- aruco2osc.maxpat : shows how to get data from Python to OSC to Max
+- little-scale.aruco-detection-receiver.amxd : receive marker data in Ableton, allowing x, y, z and rotation to be mapped to Live parameters 
