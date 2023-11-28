@@ -40,13 +40,36 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 225.0, 148.0, 283.0, 20.0 ],
+					"presentation_linecount" : 6,
+					"text" : "separate into groups of 5 vlaues (group per marker)"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 105.0, 146.0, 67.0, 22.0 ],
+					"text" : "list.group 5"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-31",
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 225.0, 150.0, 111.0, 20.0 ],
-					"presentation_linecount" : 2,
-					"text" : "values for marker 1"
+					"patching_rect" : [ 225.0, 233.0, 127.0, 20.0 ],
+					"text" : "values for marker ID 1"
 				}
 
 			}
@@ -56,7 +79,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 375.0, 210.0, 19.0, 20.0 ],
+					"patching_rect" : [ 375.0, 293.0, 19.0, 20.0 ],
 					"text" : "y"
 				}
 
@@ -67,7 +90,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 285.0, 210.0, 19.0, 20.0 ],
+					"patching_rect" : [ 285.0, 293.0, 19.0, 20.0 ],
 					"text" : "x"
 				}
 
@@ -78,8 +101,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 165.0, 210.0, 38.0, 20.0 ],
-					"presentation_linecount" : 2,
+					"patching_rect" : [ 165.0, 293.0, 38.0, 20.0 ],
 					"text" : "angle"
 				}
 
@@ -90,7 +112,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 60.0, 210.0, 30.0, 20.0 ],
+					"patching_rect" : [ 60.0, 293.0, 30.0, 20.0 ],
 					"text" : "size"
 				}
 
@@ -104,7 +126,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 405.0, 210.0, 50.0, 22.0 ]
+					"patching_rect" : [ 405.0, 293.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -117,7 +139,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 315.0, 210.0, 50.0, 22.0 ]
+					"patching_rect" : [ 315.0, 293.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -130,7 +152,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 225.0, 210.0, 50.0, 22.0 ]
+					"patching_rect" : [ 225.0, 293.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -143,7 +165,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 105.0, 210.0, 50.0, 22.0 ]
+					"patching_rect" : [ 105.0, 293.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -153,7 +175,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 225.0, 105.0, 67.0, 20.0 ],
+					"patching_rect" : [ 225.0, 188.0, 67.0, 20.0 ],
 					"text" : "marker IDs"
 				}
 
@@ -165,7 +187,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "float", "float", "float", "float" ],
-					"patching_rect" : [ 105.0, 150.0, 74.0, 22.0 ],
+					"patching_rect" : [ 105.0, 233.0, 74.0, 22.0 ],
 					"text" : "unpack f f f f"
 				}
 
@@ -177,7 +199,7 @@
 					"numinlets" : 6,
 					"numoutlets" : 6,
 					"outlettype" : [ "", "", "", "", "", "" ],
-					"patching_rect" : [ 105.0, 105.0, 86.0, 22.0 ],
+					"patching_rect" : [ 105.0, 188.0, 86.0, 22.0 ],
 					"text" : "route 1 2 3 4 5"
 				}
 
@@ -189,7 +211,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 105.0, 60.0, 113.0, 22.0 ],
+					"patching_rect" : [ 105.0, 100.0, 113.0, 22.0 ],
 					"text" : "route /aruco/marker"
 				}
 
@@ -201,7 +223,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 105.0, 15.0, 97.0, 22.0 ],
+					"patching_rect" : [ 105.0, 55.0, 97.0, 22.0 ],
 					"text" : "udpreceive 3001"
 				}
 
@@ -216,7 +238,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-5", 0 ],
 					"source" : [ "obj-2", 0 ]
 				}
 
@@ -253,6 +275,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-26", 0 ],
 					"source" : [ "obj-4", 3 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-3", 0 ],
+					"source" : [ "obj-5", 0 ]
 				}
 
 			}

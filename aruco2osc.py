@@ -8,10 +8,10 @@ from pythonosc import udp_client
 from pythonosc.osc_message_builder import OscMessageBuilder
 
 parser = argparse.ArgumentParser()
-parser.add_argument("--input", default = 0, help = "Camera source")
+parser.add_argument("--input", type=int, default = 0, help = "Camera source")
 parser.add_argument("--address", default = "/aruco/marker", help = "OSC address")
 parser.add_argument("--ip", default = "127.0.0.1", help = "OSC IP")
-parser.add_argument("--port", type=int, default = 3001, help = "OSC PORT")
+parser.add_argument("--port", type=int, default = 3000, help = "OSC PORT")
 args = parser.parse_args()
 
 osc_address = args.address
@@ -31,8 +31,8 @@ while(True):
 
     corners, ids, rejectedImgPoints = detector.detectMarkers(greyscale)
     if ids is not None:
+        message = OscMessageBuilder(address = osc_address)
         for idx, identity in enumerate(ids): 
-            message = OscMessageBuilder(address = osc_address)
             corner_0 = corners[idx][0][0]
             corner_2 = corners[idx][0][2]
             
@@ -50,8 +50,8 @@ while(True):
             message.add_arg(mid_x)
             message.add_arg(mid_y)
             
-            msg = message.build()
-            client.send(msg)
+        msg = message.build()
+        client.send(msg)
                 
     # Draw markers
     cv2.aruco.drawDetectedMarkers(image, corners, ids, (0, 255, 0))
