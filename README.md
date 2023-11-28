@@ -12,7 +12,7 @@ Args are:
 - --ip: OSC IP address to use; default 127.0.0.1
 - --port: OSC port to use; default 3001
 
-Each message contains: 
+Each message contains a list of 5 values per marker. The total list length is the number of markers * 5 values. The values in each
 - marker identity
 - size as a normalised ratio
 - angle in degrees
