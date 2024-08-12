@@ -24,7 +24,7 @@ time.sleep(2) # wait for camera
 while(True):
     ret, image = cap.read()
     greyscale = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    
+    ret,grey_thresh = cv2.threshold(greyscale,127,255,cv2.THRESH_BINARY)
     height, width, _ = image.shape
 
     detector = cv2.aruco.ArucoDetector(aruco_dict)
@@ -42,7 +42,8 @@ while(True):
             mid_y = ((corner_0[1] + corner_2[1])/2) / height
             
             size = math.sqrt(((x/width) ** 2) + ((y/height) ** 2))
-            angle = math.degrees(math.atan(y / x)) - 45
+            angle = math.degrees(math.atan2(y, x))
+            angle = (angle + 360 - 45) % 360
             
             message.add_arg(int(identity[0]))
             message.add_arg(size)
