@@ -38,12 +38,12 @@ while(True):
             
             x,y = corner_2 - corner_0
             
-            mid_x = ((corner_0[0] + corner_2[0])/2) / width
-            mid_y = ((corner_0[1] + corner_2[1])/2) / height
+            mid_x = float(((corner_0[0] + corner_2[0])/2) / width)
+            mid_y = float(((corner_0[1] + corner_2[1])/2) / height)
             
             size = math.sqrt(((x/width) ** 2) + ((y/height) ** 2))
             angle = math.degrees(math.atan2(y, x))
-            angle = (angle + 360 - 45) % 360
+            angle = (angle + 360.0 - 45) % 360.0
             
             message.add_arg(int(identity[0]))
             message.add_arg(size)
