@@ -10,7 +10,7 @@ Args are:
 - --input: camera to use; default 0
 - --address: OSC message address to use; default /aruco/marker
 - --ip: OSC IP address to use; default 127.0.0.1
-- --port: OSC port to use; default 3001
+- --port: OSC port to use; default 3000
 
 Each message contains a list of 5 values per marker. The total list length is the number of markers * 5 values. The values in each
 - marker identity
