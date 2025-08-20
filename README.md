@@ -11,6 +11,7 @@ Args are:
 - --address: OSC message address to use; default /aruco/marker
 - --ip: OSC IP address to use; default 127.0.0.1
 - --port: OSC port to use; default 3000
+- --overlay-only: Do not display video feed and only show ArUco positioning 
 
 Each message contains a list of 5 values per marker. The total list length is the number of markers * 5 values. The values in each
 - marker identity
